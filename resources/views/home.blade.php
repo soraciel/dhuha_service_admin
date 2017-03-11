@@ -10,7 +10,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="http://www.creative-tim.com">
+			<a href="#">
 				<div class="logo-container">
 					<div class="logo">
 						<img src="assets/img/logo.png" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>" data-placement="bottom" data-html="true">
@@ -30,42 +30,42 @@
 					</a>
 				</li>
 				<li>
-					<a href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
+					<a href="#" target="_blank">
 						<i class="material-icons">settings</i> Layanan Kami
 					</a>
 				</li>
 				<li>
-					<a href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
+					<a href="#" target="_blank">
 						<i class="material-icons">mood</i> Tim Mekanik
 					</a>
 				</li>
 				<li>
-					<a href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
+					<a href="#" target="_blank">
 						<i class="material-icons">person</i> Profil
 					</a>
 				</li>
 				<li>
-					<a href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
+					<a href="#" target="_blank">
 						<i class="material-icons">subject</i> Berita
 					</a>
 				</li>
 				<li>
-					<a href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
+					<a href="#" target="_blank">
 						<i class="material-icons">thumb_up</i> Testimoni
 					</a>
 				</li>
 				<li>
-					<a rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" class="btn btn-white btn-simple btn-just-icon">
+					<a rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="#" target="_blank" class="btn btn-white btn-simple btn-just-icon">
 						<i class="fa fa-twitter"></i>
 					</a>
 				</li>
 				<li>
-					<a rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" class="btn btn-white btn-simple btn-just-icon">
+					<a rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#" target="_blank" class="btn btn-white btn-simple btn-just-icon">
 						<i class="fa fa-facebook-square"></i>
 					</a>
 				</li>
 				<li>
-					<a rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" class="btn btn-white btn-simple btn-just-icon">
+					<a rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="#" target="_blank" class="btn btn-white btn-simple btn-just-icon">
 						<i class="fa fa-instagram"></i>
 					</a>
 				</li>
