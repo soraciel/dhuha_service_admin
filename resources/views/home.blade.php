@@ -1,5 +1,18 @@
 @extends('app')
 @section('content')
+<style type="text/css">
+	.titleBar {
+		background-color: rgb(225,0,0);
+		height: 4px;
+		width: 60px;
+		margin: 0 auto 22px;
+		position: relative;
+	}
+	.logo-container .logo {
+		margin: 5px;
+		width: 40px;
+	}
+</style>
 <!-- Navbar -->
 <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
 	<div class="container">
@@ -13,10 +26,10 @@
 			<a href="#">
 				<div class="logo-container">
 					<div class="logo">
-						<img src="assets/img/logo.png" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>" data-placement="bottom" data-html="true">
+						<img src="assets/img/logo.png">
 					</div>
 					<div class="brand">
-						Dhuha Service 
+						<b>DHUHA SERVICE</b>
 					</div>
 				</div>
 			</a>
@@ -25,48 +38,33 @@
 		<div class="collapse navbar-collapse" id="navigation-index">
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="components-documentation.html" target="_blank">
+					<a href="#home" class="link">
 						<i class="material-icons">home</i> HOME
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
-						<i class="material-icons">settings</i> Layanan Kami
+					<a href="#layanan" class="link">
+						<i class="material-icons">settings</i> Layanan
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a href="#tim" class="link">
 						<i class="material-icons">mood</i> Tim Mekanik
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a href="#profil" class="link">
 						<i class="material-icons">person</i> Profil
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a href="#berita" class="link">
 						<i class="material-icons">subject</i> Berita
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a href="#testimoni" class="link">
 						<i class="material-icons">thumb_up</i> Testimoni
-					</a>
-				</li>
-				<li>
-					<a rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="#" target="_blank" class="btn btn-white btn-simple btn-just-icon">
-						<i class="fa fa-twitter"></i>
-					</a>
-				</li>
-				<li>
-					<a rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#" target="_blank" class="btn btn-white btn-simple btn-just-icon">
-						<i class="fa fa-facebook-square"></i>
-					</a>
-				</li>
-				<li>
-					<a rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="#" target="_blank" class="btn btn-white btn-simple btn-just-icon">
-						<i class="fa fa-instagram"></i>
 					</a>
 				</li>
 
@@ -82,7 +80,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="brand">
-						<h1>Dhuha Service</h1>
+						<h1>DHUHA SERVICE</h1>
 						<h3>Automotive Repair Centre</h3>
 					</div>
 				</div>
@@ -91,7 +89,9 @@
 		</div>
 	</div>
 
-	<div class="main main-raised">
+	<div class="main main-raised wow animated fadeInUp">
+	<h2 id="home" align="center" style="padding-top: 20px"><b>HOME</b></h2>
+				<div class="titleBar"></div>
 		<div class="section section-basic">
 			<div class="container">
 				<table>
@@ -151,26 +151,58 @@
 					</tr>
 				</table>
 				<hr>
-				<h2 align="center">LAYANAN KAMI</h2>
-				<div class="row">
-					<div class="col-xs-6 col-sm-3">
-						<img src="assets/img/avatar.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
-					</div>
-					<div class="col-xs-6 col-sm-3">
-						<img src="assets/img/avatar.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
-					</div>
-					<div class="col-xs-6 col-sm-3">
-						<img src="assets/img/avatar.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
-					</div>
-					<div class="col-xs-6 col-sm-3">
-						<img src="assets/img/avatar.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+				<h2 id="layanan" align="center"><b>LAYANAN KAMI</b></h2>
+				<div class="titleBar"></div>
+				<div class="row wow animated fadeInUp">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="row">
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/tune_up_efi.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Tune Up Efi</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/spooring_2.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Spooring</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/balancing.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Balancing</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/understell.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Under Steel</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/ac_mobil.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">AC Mobil</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/ganti_ban.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Ganti Ban</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/nitrogen.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Nitrogen</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/kelistrikan.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Kelitrikan</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/ganti_oli_fluser.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Ganti Oli Flusher</h4>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<img src="dhuha_foto/cuci_mobil.jpg" alt="Raised Image" class="img-rounded img-responsive img-raised" style="margin-bottom: 20px">
+								<h4 align="center" style="margin-bottom: 20px">Cuci Mobil</h4>
+							</div>
+						</div>
 					</div>
 				</div>
+				
 			</div>
-			<div class="section section-tabs" id="carousel">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
+			<div class="wow animated fadeInUp" id="carousel">
+				<div class="">
 
 							<!-- Carousel Card -->
 							<div class="card card-raised card-carousel">
@@ -187,21 +219,21 @@
 										<!-- Wrapper for slides -->
 										<div class="carousel-inner">
 											<div class="item active">
-												<img src="assets/img/bg2.jpeg" alt="Awesome Image">
+												<img src="dhuha_foto/1.jpeg" alt="Awesome Image">
 												<div class="carousel-caption">
-													<h4><i class="material-icons">location_on</i> Yellowstone National Park, United States</h4>
+													<button class="btn btn-danger">Yellowstone National Park, United States</button>
 												</div>
 											</div>
 											<div class="item">
-												<img src="assets/img/bg3.jpeg" alt="Awesome Image">
+												<img src="dhuha_foto/2.jpeg" alt="Awesome Image">
 												<div class="carousel-caption">
-													<h4><i class="material-icons">location_on</i> Somewhere Beyond, United States</h4>
+													<button class="btn btn-danger">Somewhere Beyond, United States</button>
 												</div>
 											</div>
 											<div class="item">
-												<img src="assets/img/bg4.jpeg" alt="Awesome Image">
+												<img src="dhuha_foto/customer_service.jpg" alt="Awesome Image">
 												<div class="carousel-caption">
-													<h4><i class="material-icons">location_on</i> Yellowstone National Park, United States</h4>
+													<button class="btn btn-danger">Customer Service</button>
 												</div>
 											</div>
 										</div>
@@ -217,76 +249,79 @@
 								</div>
 							</div>
 							<!-- End Carousel Card -->
-
-						</div>
-					</div>
 				</div>
 			</div>
-			<div class="container">
-				<h2 align="center">TIM MEKANIK</h2>
+			<div class="container wow animated fadeInUp">
+				<h2 id="tim" align="center"><b>TIM MEKANIK</b></h2>
+				<div class="titleBar"></div>
 				<div class="row">
-					<div class="col-xs-4 col-sm-3">
-						<img src="assets/img/avatar.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle" style="margin-bottom: 20px">
+					<div class="col-xs-4 col-sm-2 col-sm-offset-1">
+						<img src="images/foto_mekanik/1.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle img-raised" style="margin-bottom: 20px">
+						<h4 align="center">Sugeng<br><small>Mekanik</small></h4>
 					</div>
-					<div class="col-xs-4 col-sm-3">
-						<img src="assets/img/avatar.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle" style="margin-bottom: 20px">
+					<div class="col-xs-4 col-sm-2">
+						<img src="images/foto_mekanik/2.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle img-raised" style="margin-bottom: 20px">
+						<h4 align="center">Kukuh<br><small>Mekanik</small></h4>
 					</div>
-					<div class="col-xs-4 col-sm-3">
-						<img src="assets/img/avatar.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle" style="margin-bottom: 20px">
+					<div class="col-xs-4 col-sm-2">
+						<img src="images/foto_mekanik/3.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle img-raised" style="margin-bottom: 20px">
+						<h4 align="center">Wills<br><small>Spooring</small></h4>
 					</div>
-					<div class="col-xs-4 col-sm-3">
-						<img src="assets/img/avatar.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle" style="margin-bottom: 20px">
+					<div class="col-xs-4 col-sm-2">
+						<img src="images/foto_mekanik/4.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle img-raised" style="margin-bottom: 20px">
+						<h4 align="center">Anas<br><small>Mekanik</small></h4>
+					</div>
+					<div class="col-xs-4 col-sm-2">
+						<img src="images/foto_mekanik/5.jpg" alt="Raised Image" class="img-rounded img-responsive img-circle img-raised" style="margin-bottom: 20px">
+						<h4 align="center">Agaus<br><small>Mekanik</small></h4>
 					</div>
 				</div>
 				<hr>
-				<h2 align="center">VIDEO PROFILE</h2>
-				<img src="assets/img/bg2.jpeg" class="img-responsive">
+				<h2 id="profil" align="center"><b>VIDEO PROFIL</b></h2>
+				<div class="titleBar"></div>
+				<div class="row wow animated fadeInUp">
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<div style="background:url('dhuha_foto/pintu_depan.jpg'); width: 100%; height:360px;display:block; background-size: cover, cover; background-position: center, center; background-repeat: none, none">
+						<a href="https://www.youtube.com/watch?v=YonXYokw9CE" class="popup-youtube">
+						<img src="dhuha_foto/play.png" style="width: 60px; position: relative;top: 50%; left: 50%; z-index: 100; margin-left: -30px; margin-top: -30px"/></a>
+					</div>
+						
+					</div>
+				</div>
 				<hr>
-				<h2 align="center">BERITA TERBARU</h2>
+				<h2 id="berita" align="center"><b>BERITA TERBARU</b></h2>
+				<div class="titleBar"></div>
 				<div class="row">
-					<div class="col-xs-6 col-sm-3">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-4 wow animated fadeInUp">
 						<!-- Tabs with icons on Card -->
-						<div class="card card-nav-tabs">
-							<div class="header" style="height: auto; background-color: #ff0000">
-								<!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-								<div class="card-header" data-background-color="purple">
-									<h4 class="card-title" align="center" style="color: #fff">Berita</h4>
-								</div>
-							</div>
+						<div class="card">
+						<img src="images/foto_mekanik/5.jpg" style="width: 100%">
 							<div class="content">
 								<div class="tab-content text-center">
 									<div class="tab-pane active" id="profile">
+									<h3><b>Lorem Ipsum Dolor</b></h3>
+									<div class="titleBar"></div>
 										<p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
+									</div>
+									<div class="footer">
+										BACA SELENGKAPNYA
 									</div>
 								</div>
 							</div>
 						</div>
 						<!-- End Tabs with icons on Card -->
 					</div>
-					<div class="col-xs-6 col-sm-3">
-						<!-- Tabs with icons on Card -->
-						<div class="card card-nav-tabs">
-							<div class="header" style="height: auto; background-color: #ff0000">
-								<!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-								<div class="card-header" data-background-color="purple">
-									<h4 class="card-title" align="center" style="color: #fff">Berita</h4>
-								</div>
-							</div>
-							<div class="content">
-								<div class="tab-content text-center">
-									<div class="tab-pane active" id="profile">
-										<p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- End Tabs with icons on Card -->
+				</div>
 					</div>
 				</div>
+
 				<hr>
-				<h2 align="center">TESTIMONI</h2>
+				<h2 id="testimoni" align="center"><b>TESTIMONI</b></h2>
+				<div class="titleBar"></div>
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-10 col-sm-offset-1 wow animated fadeInUp">
 						<div class="col-md-4 col-sm-6">
 							<div class="card-container">
 								<div class="card">
@@ -341,7 +376,7 @@
 								</div> <!-- end card -->
 							</div> <!-- end card-container -->
 						</div> <!-- end col sm 3 -->
-						<div class="col-md-4 col-sm-6">
+						<div class="col-md-4 col-sm-6 wow animated fadeInUp">
 							<div class="card-container">
 								<div class="card">
 									<div class="front">
@@ -395,7 +430,7 @@
 								</div> <!-- end card -->
 							</div> <!-- end card-container -->
 						</div> <!-- end col sm 3 -->
-						<div class="col-md-4 col-sm-6">
+						<div class="col-md-4 col-sm-6 wow animated fadeInUp">
 							<div class="card-container">
 								<div class="card">
 									<div class="front">
@@ -454,12 +489,22 @@
 				
 
 			</div>
+
 		</div>
+		<div class="map wow animated fadeInUp" id="contact">
+	<div id="map"></div>
+	<div class="map-c">
+		<p>Website resmi Dhuha Service Jombang sebagai media informasi yang komperhensif untuk pelanggan dan calon pelanggan untuk mendapatkan informasi yang update dan jangkauan lebih luas.</p>
+		<button class="btn btn-danger">Dokumen CV. Dhuha</button>
 	</div>
+</div>
+	</div>
+
+
 	<footer class="footer">
 		<div class="container">
-			<div class="copyright pull-right">
-				&copy; 2017, Make something people need want by OWLINE
+			<div class="copyright center">
+				&copy; 2017, Make something people need by <img style="width: 100px" src="{{url('dhuha_foto/gambar_footer.png')}}">
 			</div>
 		</div>
 	</footer>
