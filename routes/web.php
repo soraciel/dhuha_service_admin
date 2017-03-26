@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/tes', function () {
+    return view('admin/add_berita');
+});
