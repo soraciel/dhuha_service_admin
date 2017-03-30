@@ -23,13 +23,13 @@
                                         <th>Action</th>
                                     </thead>
                                     <tbody>
-                                         
+                                         @foreach($layanan as $l)
                                         <tr>
-                                            <td>1</td>
-                                            <td><a onclick="location.href=#">Link Gambar</a></td>
-                                            <td>Isi Nama</td>
-                                            <td>Isi Layanan</td>
-                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='#'">Lihat</button> 
+                                            <td>{{$l->id}}</td>
+                                            <td><a onclick="location.href='{{ url('layanan/show/'.$l->id.'') }}'">{{$l->foto_path}}</a></td>
+                                            <td>{{$l->nama}}</td>
+                                            <td>{{$l->detail_layanan}}</td>
+                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='#'">Edit</button> 
                                                  <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='#'" >delete</button></td>
                                                 
                                         </tr>
@@ -39,11 +39,11 @@
 </div>
 
                               
-                                     
+                                     @endforeach
 
                                     </tbody>
                                 </table>
-
+<?php echo $layanan->links(); ?>
                             </div>
                         </div>
                     </div>

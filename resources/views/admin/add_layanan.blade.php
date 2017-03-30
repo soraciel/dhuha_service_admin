@@ -12,7 +12,7 @@
                             </div>
                             <div class="content">
                            
-                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="#">
+                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="{{ $form_add }}">
                                     <!--upload file-->
                                     
                                     <label>Upload Gambar Layanan</label>
@@ -28,7 +28,7 @@
                                     <br>
                                     
                                     <label>Keterangan</label>
-                                    <textarea class="form-control" placeholder="Tulis penjelasan layanan" name="detail"></textarea>
+                                    <textarea class="form-control" placeholder="Tulis penjelasan layanan" name="detail_layanan"></textarea>
 
                                     <br>
 
