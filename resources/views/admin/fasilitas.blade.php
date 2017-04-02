@@ -11,7 +11,7 @@
                                 <h4 class="title">Fasilitas</h4>
                                 
                                 
-                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href=#">Tambah Data</button>
+                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href='{{url('fasilitas/create')}}'">Tambah Data</button>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
@@ -22,13 +22,13 @@
                                         <th>Action</th>
                                     </thead>
                                     <tbody>
-                                         
+                                            @foreach($fasilitas as $f)              
                                         <tr>
-                                            <td>1</td>
-                                            <td><a onclick="location.href=#">Link Gambar</a></td>
-                                            <td>Isi Nama</td>
-                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='#'">Lihat</button> 
-                                                 <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='#'" >delete</button></td>
+                                            <td>{{$f->id}}</td>
+                                            <td><a onclick="location.href='{{ url('fasilitas/show/'.$f->id.'') }}'">{{$f->foto_path}}</a></td>
+                                            <td>{{$f->nama}}</td>
+                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='{{ url('fasilitas/edit/'.$f->id.'') }}'">Edit</button> 
+                                                 <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='{{ url('fasilitas/destroy/'.$f->id.'') }}'" >delete</button></td>
                                                 
                                         </tr>
  </div>
@@ -37,11 +37,11 @@
 </div>
 
                               
-                                     
+                                     @endforeach
 
                                     </tbody>
                                 </table>
-
+<?php echo $fasilitas->links(); ?>
                             </div>
                         </div>
                     </div>

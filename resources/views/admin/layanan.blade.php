@@ -11,7 +11,7 @@
                                 <h4 class="title">Layanan Kami</h4>
                                 
                                 
-                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href=#">Tambah Data</button>
+                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href='{{url('layanan/create')}}'">Tambah Data</button>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
@@ -29,8 +29,8 @@
                                             <td><a onclick="location.href='{{ url('layanan/show/'.$l->id.'') }}'">{{$l->foto_path}}</a></td>
                                             <td>{{$l->nama}}</td>
                                             <td>{{$l->detail_layanan}}</td>
-                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='#'">Edit</button> 
-                                                 <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='#'" >delete</button></td>
+                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='{{ url('layanan/edit/'.$l->id.'') }}'">Edit</button> 
+                                                 <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='{{ url('layanan/destroy/'.$l->id.'') }}'" >delete</button></td>
                                                 
                                         </tr>
  </div>

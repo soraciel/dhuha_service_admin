@@ -12,7 +12,7 @@
                             </div>
                             <div class="content">
                            
-                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="#">
+                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="{{ $form_update }}">
                                     <!--upload file-->
                                     
                                     <label>Upload Gambar Fasilitas</label>
@@ -23,13 +23,13 @@
                                     
                                     
                                     <label>Nama Fasilitas</label>
-                                    <input type="text" class="form-control" placeholder="Tulis nama fasilitas" name="judul">
+                                    <input type="text" class="form-control" placeholder="Tulis nama fasilitas" name="judul" value="{{ $fasilitas->nama }}">
 
                                     <br>
                                     
                                     
 
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Edit Fasilitas</button>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Simpan</button>
                                     <div class="clearfix"></div>
 
                                 </form> 

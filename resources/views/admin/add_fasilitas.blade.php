@@ -12,7 +12,7 @@
                             </div>
                             <div class="content">
                            
-                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="#">
+                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="{{ $form_add }}">
                                     <!--upload file-->
                                     
                                     <label>Upload Gambar Fasilitas</label>

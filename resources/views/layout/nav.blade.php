@@ -8,13 +8,13 @@
 
             <ul class="nav">
                 <li>
-                    <a href="{{url('partnership')}}">
+                    <a href="{{url('layanan')}}">
                         <i class="pe-7s-smile"></i>
                         <p>Layanan Kami</p>
                     </a>
                 </li>
                 <li >
-                    <a href="{{url('cars')}}">
+                    <a href="{{url('fasilitas')}}">
                         <i class="pe-7s-car"></i>
                         <p>Fasilitas(Slider)</p>
                     </a>
