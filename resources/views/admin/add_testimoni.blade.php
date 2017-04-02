@@ -12,7 +12,7 @@
                             </div>
                             <div class="content">
                            
-                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="#">
+                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="{{ $form_add }}">
                                     <!--upload file-->
                                     
                                     <label>Upload Foto</label>
@@ -31,7 +31,7 @@
 
                                     <br>
                                     <label>Isi Testimoni</label>
-                                    <textarea class="form-control" placeholder="Tulis penjelasan layanan" name="testimoni"></textarea>
+                                    <textarea class="form-control" placeholder="Tulis testimoni" name="testimoni"></textarea>
                                     <br>
 
                                     <button type="submit" class="btn btn-info btn-fill pull-right">Tambah Testimoni</button>

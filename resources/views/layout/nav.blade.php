@@ -21,13 +21,13 @@
                 </li>
                 
                 <li>
-                    <a href="#">
+                    <a href="{{url('tim')}}">
                         <i class="pe-7s-users"></i>
                         <p>Tim Mekanik</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{url('achievement')}}">
+                    <a href="{{url('testimoni')}}">
                         <i class="pe-7s-medal"></i>
                         <p>Testimoni</p>
                     </a>

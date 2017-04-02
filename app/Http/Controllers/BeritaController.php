@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\berita;
+use File;
 
 class BeritaController extends Controller
 {
@@ -14,6 +16,9 @@ class BeritaController extends Controller
     public function index()
     {
         //
+        $berita = berita::paginate(20);
+        $view =  view('admin/berita')->with('berita',$berita);
+        return $view;
     }
 
     /**

@@ -12,7 +12,7 @@
                                 <h4 class="title">Tim Mekanik</h4>
                                 
                                 
-                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href=#">Tambah Data</button>
+                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href='{{url('tim/create')}}'">Tambah Data</button>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
@@ -24,14 +24,14 @@
                                         <th>Action</th>
                                     </thead>
                                     <tbody>
-                                         
+                                     @foreach($tim as $t)                   
                                         <tr>
-                                            <td>1</td>
-                                            <td><a onclick="location.href=#">Link Gambar</a></td>
-                                            <td>Isi Nama</td>
-                                            <td>Isi Jabatan</td>
-                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='#'">Lihat</button> 
-                                                 <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='#'" >delete</button></td>
+                                            <td>{{$t->id}}</td>
+                                            <td><a onclick="location.href='{{ url('tim/show/'.$t->id.'') }}'">{{$t->foto_path}}</a></td>
+                                            <td>{{$t->nama}}</td>
+                                            <td>{{$t->jabatan}}</td>
+                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='{{ url('tim/edit/'.$t->id.'') }}'">Edit</button> 
+                                                 <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='{{ url('tim/destroy/'.$t->id.'') }}'" >delete</button></td>
                                                 
                                         </tr>
  </div>
@@ -40,11 +40,11 @@
 </div>
 
                               
-                                     
+                                     @endforeach
 
                                     </tbody>
                                 </table>
-
+<?php echo $tim->links(); ?>
                             </div>
                         </div>
                     </div>
