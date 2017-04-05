@@ -1,56 +1,53 @@
-
-
 @extends('layout.master')
 @section('content')
+       
+
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Video</h4>
-                                
-                                
-                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href=#">Tambah Data</button>
+                                <h4 class="title">Video Profile</h4>
                             </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th>ID</th>
-                                        <th>Foto</th>
-                                        <th>Link Video</th>
-                                        <th>Action</th>
-                                    </thead>
-                                    <tbody>
-                                         
-                                        <tr>
-                                            <td>1</td>
-                                            <td><a onclick="location.href=#">Link Gambar</a></td>
-                                            <td>Isi Link</td>
-                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='#'">Lihat</button> 
-                                                
-                                        </tr>
- </div>
+                            <div class="content">
+                           
+                             <form  method="post" accept-charset="UTF-8" enctype="multipart/form-data" action="{{url('video/update/1')}}">
+                                    <!--upload file-->
+                                     <?php 
+                                    
+                                    $path = 'image/video/'. $video->foto_path;
+                                    ?>
+                                    <!-- resize display image-->
 
-  </div>
-</div>
+                                    
+                                    <img src="{{ asset($path) }}" alt="">
+                                    
+                                  
+                                    <label>Upload Gambar Video Baru</label>
+                                    <input type="file" class="btn btn-outline" name="gambar">
+                                    
 
-                              
-                                     
+                                    <br>
+                                    
+                                    
+                                    <label>Link Video</label>
+                                    <input type="text" class="form-control" placeholder="Tulis nama fasilitas" name="judul" value="{{ $video->link }}">
 
-                                    </tbody>
-                                </table>
+                                    <br>
+                                    
+                                    
 
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Update</button>
+                                    <div class="clearfix"></div>
+
+                                </form> 
                             </div>
                         </div>
                     </div>
 
-
-
-                   
-
-
                 </div>
             </div>
         </div>
+
 @stop

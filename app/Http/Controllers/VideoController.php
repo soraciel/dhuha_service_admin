@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\video;
+use File;
 
 class VideoController extends Controller
 {
@@ -14,6 +16,9 @@ class VideoController extends Controller
     public function index()
     {
         //
+        $video = video::find(1);
+        $view =  view('admin/video')->with('video',$video);
+        return $view;
     }
 
     /**
@@ -69,6 +74,26 @@ class VideoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $video = video::find($id);
+
+        if($request->hasFile('gambar')){
+            //var_dump($_FILES);
+        $old_gambar = $video->foto_path;
+        $old_path = 'image/video/'.$old_gambar;
+        File::delete($old_path);
+
+        $gambar = $request->file('gambar');
+        $filename = $gambar->getClientOriginalName();
+        $path = 'image/video/'.$filename;
+        $request->file('gambar')->move("image/video", $filename);
+        $video->foto_path = $filename;
+        }
+
+            //ubah db
+        $video->link = $request['judul'] ;
+        $video->save();
+
+        return redirect()->to('/video');
     }
 
     /**

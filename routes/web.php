@@ -58,3 +58,7 @@ Route::get('/berita/show/{id}', 'BeritaController@show');
 Route::get('/berita/edit/{id}', 'BeritaController@edit');
 Route::post('/berita/update/{id}', 'BeritaController@update');
 Route::get('/berita/destroy/{id}', 'BeritaController@destroy');
+Route::get('/berita/show_isi/{id}', 'BeritaController@show_isi');
+
+Route::get('/video', 'VideoController@index');
+Route::post('/video/update/{id}', 'VideoController@update');

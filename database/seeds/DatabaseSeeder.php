@@ -22,11 +22,11 @@ class TableSeeder extends Seeder {
     {
         //DB::table('layanan')->delete();
 
-        DB::table('layanan')->insert(
+        DB::table('video')->insert(
         	array(
-        	'foto_path' => 'ini_foto',
-        	'nama'=>'ini_nama',
-        	'detail_layanan'=>'ini_layanan'
+        	'foto_path' => 'coba.jpg',
+        	'link'=>'www.youtube.com',
+        	
         	)
         );
     }

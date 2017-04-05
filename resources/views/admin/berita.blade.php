@@ -11,7 +11,7 @@
                                 <h4 class="title">Berita</h4>
                                 
                                 
-                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href=#">Tambah Data</button>
+                             <button type="button" class="btn btn-info btn-fill pull-right" onclick="location.href='{{url('berita/create')}}'">Tambah Data</button>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
@@ -20,19 +20,19 @@
                                         <th>Foto</th>
                                         <th>Tanggal</th>
                                         <th>Judul</th>
-                                        <th>Isi</th>
+                                        
                                         <th>Action</th>
                                     </thead>
                                     <tbody>
-                                         
+                                         @foreach($berita as $b)  
                                         <tr>
-                                            <td>1</td>
-                                            <td><a onclick="location.href=#">Link Gambar</a></td>
-                                            <td>Isi Tanggal</td>
-                                            <td>Isi Judul</td>
-                                            <td>Isi Berita</td>
-                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='#'">Lihat</button> 
-                                                 <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='#'" >delete</button></td>
+                                            <td>{{$b->id}}</td>
+                                            <td><a onclick="location.href='{{ url('berita/show/'.$b->id.'') }}'">{{$b->foto_path}}</a></td>
+                                            <td>{{$b->tanggal}}</td>
+                                            <td><a onclick="location.href='{{ url('berita/show_isi/'.$b->id.'') }}'">{{$b->judul}}</a></td>
+                                            
+                                            <td><button class="btn btn-primary btn-fill btn-sm" onclick="location.href='{{ url('berita/edit/'.$b->id.'') }}'">Edit</button> 
+                                                 <button class="btn btn-danger btn-fill btn-sm" onclick="location.href='{{ url('berita/destroy/'.$b->id.'') }}'" >delete</button></td>
                                                 
                                         </tr>
  </div>
@@ -42,10 +42,10 @@
 
                               
                                      
-
+                                @endforeach
                                     </tbody>
                                 </table>
-
+<?php echo $berita->links(); ?>
                             </div>
                         </div>
                     </div>
